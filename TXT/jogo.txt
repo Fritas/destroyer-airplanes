@@ -1,0 +1,111 @@
+Jogo do avião:
+	O jogo é em 2D, estilo clássico.
+	O jogador tem um avião, o objetivo é percorrer o mapa destruindo inimigos. Para sobreviver ele pode recuparar vida e combustivel durante o percurso. O jogo é infinito e acaba com a morte do jogador, o objetivo final é ter a maior pontuação.
+
+Requisitos:
+	aeronave:
+	RU009: ganhar combustivel -ok
+	RU012: dano extra temporario -ok 
+	RU008: recuperar vida -ok
+	RU013: resistencia extra temporaria -ok
+
+	jogador: 
+	RU002: escolher nome de jogador
+	RU003: registrar pontuações
+	RU023: sorteia a quantidade de combustivel e vida num sorteio de 0-100
+	RU024: sorteia a quantidade de vida num sorteio de 0-100
+	RU025: comecar com 50 de vida quando o nível for dificil ou super dificil
+
+	jogo:
+	RU015: aumentar dificuldade
+	RU001: menu inicial
+	RU004: pausar jogo
+	RU006: optar entre avião e helicóptero
+	RU005: mudar aparencia do avião/helipcóptero do jogador
+	RU007: dificuldades (bebezao(facil), adolescente(moderado), to adulto(difícil), ta maluco bixo(super dificil))
+	RU014: bombas para arrancar vida
+
+	eventos:
+	RU010: inimigo monstruoso quando vida abaixar de 15%
+	RU011: inimigo monstruoso preenche toda vida e combustivel
+	RU017: aumentar dificuldade automaticamente quando 100 pontos a cada dobra de pontuacao aumenta (vida, velocidade e dano) dos inimigos
+	RU016: tela preta quando pausar jogo com simbolo de pausado
+	RU019: ganha ponto quando causa dano nos inimigos
+	RU020: ganha ponto quando destroi os inimigos
+	RU018: aumenta sua resistencia e vida automaticamente quando chega 200 pontos pontuacao anterior  é igual a ela vezes 2.5
+	RU021: dropa vida e combustivel ao destruir inimigos aleatoriamente num sorteio de 0-10
+	RU022: dropa combustivel ao destruir inimigos aleatoriamente num sorteio de 0-10	
+	
+
+Classe Jogo:
+	atributos
+		top 10
+		top -10
+
+Classe Jogar:
+	atributos:
+		frequencia_de_nuvem
+		frequencia_de_combustivel
+		frequencia_de_vida
+		frequencia_de_helicoptero
+		mapa
+		jogador
+
+Classe Jogador:
+    atributos: 
+        nome
+        pontuacao
+        vida
+        avião
+
+Classe Projetil:
+	atributo:
+		posicao
+		velocidade
+		posicao_inicial
+		dano
+	metodos:
+		atualizar_projetil
+		tratar_eventos
+
+Classe Aeronave:
+	atributos:
+		projetil(classe)
+		vida
+		resistencia
+		posicao
+	metodos:
+		atualizar_aeronave
+		tratar_eventos
+		verificar_vida
+		validar_coordenada
+		atirar
+	
+Classe AeronaveDoJogador(Aeronave):
+	atributos:
+		combustivel
+
+Classe Bomba:
+	
+
+Classe Objeto:
+	atributos:
+		posicao
+		imagem
+	metodos:
+		atualizar_objeto
+
+	Classe Nuvem(Objeto):
+		atributos:
+			velocidade
+
+	Classe Combustivel(Objeto)
+
+
+
+
+Classe Mapa:
+	atributos:
+		largura
+		altura
+		background

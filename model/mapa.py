@@ -1,5 +1,3 @@
-
-
 """
 Created on 22 de jun de 2017
 
@@ -7,7 +5,7 @@ Created on 22 de jun de 2017
 @author: Andrei
 @author: Joao
 """
-from Jogo.objeto import Objeto
+from jogo.objeto import Objeto
 
 class Mapa(Objeto):
     """

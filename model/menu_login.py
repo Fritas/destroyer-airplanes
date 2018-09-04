@@ -1,6 +1,13 @@
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
 from tkinter import *
-from bancoDeDados.conexao import Conexao
-from Jogo.gerenciarJogo import iniciar_jogo
+from dal.conexao import Conexao
+from gerenciarJogo import iniciar_jogo
 
 class Login:
     """

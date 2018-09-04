@@ -1,5 +1,12 @@
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
 from random import randint
-from Jogo.objeto import Objeto
+from objeto import Objeto
 
 
 

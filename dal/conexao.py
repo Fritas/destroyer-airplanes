@@ -1,4 +1,12 @@
-from bancoDeDados.crud import Crud
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
+
+from banco_de_dados.crud import Crud
 
 class Conexao(Crud):
     """

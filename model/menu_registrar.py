@@ -1,5 +1,12 @@
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
 from tkinter import *
-from bancoDeDados.conexao import Conexao
+from dal.conexao import Conexao
 
 class Registro:
     '''

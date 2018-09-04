@@ -1,8 +1,15 @@
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
 from random import randint
-from Cenario.mapa import Mapa
-from Cenario.objeto_drop import ObjetoDrop
-from Jogadores.jogador import Jogador
-from Aeronaves.aeronave_npc import AeronaveNPC
+from mapa import Mapa
+from objeto_drop import ObjetoDrop
+from jogador import Jogador
+from aeronave_npc import AeronaveNPC
 
 
 class Jogo(object):
@@ -84,9 +91,9 @@ class Jogo(object):
         :return:
         """
         self.ambiente.som_effects = True
-        self.som_destruicao_npc = self.ambiente.mixer.Sound('../sound/destruicao_npc.wav')
+        self.som_destruicao_npc = self.ambiente.mixer.Sound('static/sound/destruicao_npc.wav')
         self.som_destruicao_npc.set_volume(1)
-        self.som_derrota = self.ambiente.mixer.Sound('../sound/derrota.wav')
+        self.som_derrota = self.ambiente.mixer.Sound('static/sound/derrota.wav')
 
     ######################### ADICIONAR #########################
     def carregar_jogadores(self, jogadores):
@@ -133,9 +140,9 @@ class Jogo(object):
         :return:
         """
         if randint(0, 1):
-            aeronave = AeronaveNPC(self.ambiente, '../img/aeronave/aviaoNPC.gif', '../img/projetil/projetil.gif', 6, 2, 100, 15, (0, 3))
+            aeronave = AeronaveNPC(self.ambiente, 'static/img/aeronave/aviaoNPC.gif', 'static/img/projetil/projetil.gif', 6, 2, 100, 15, (0, 3))
         else:
-            aeronave = AeronaveNPC(self.ambiente, '../img/aeronave/helicopteroNPC.gif', '../img/projetil/projetil.gif', 6, 4, 50, 15, (0, 3))
+            aeronave = AeronaveNPC(self.ambiente, 'static/img/aeronave/helicopteroNPC.gif', 'static/img/projetil/projetil.gif', 6, 4, 50, 15, (0, 3))
         self.grup_npc.add(aeronave)
 
     def criar_drop(self):
@@ -146,13 +153,13 @@ class Jogo(object):
         opcao = randint(0, 1)
 
         if opcao == 0:
-            self.grup_drops.add(ObjetoDrop(self.ambiente, '../img/drop/vida.gif', 'vida'))
+            self.grup_drops.add(ObjetoDrop(self.ambiente, 'static/img/drop/vida.gif', 'vida'))
         elif opcao == 1:
-            self.grup_drops.add(ObjetoDrop(self.ambiente, '../img/drop/combustivel.gif', 'combustivel'))
+            self.grup_drops.add(ObjetoDrop(self.ambiente, 'static/img/drop/combustivel.gif', 'combustivel'))
         elif opcao == 2:
-            self.grup_drops.add(ObjetoDrop(self.ambiente,'../img/drop/resistencia_extra.gif', 'resistencia_extra'))
+            self.grup_drops.add(ObjetoDrop(self.ambiente,'static/img/drop/resistencia_extra.gif', 'resistencia_extra'))
         elif opcao == 3:
-            self.grup_drops.add(ObjetoDrop(self.ambiente, '../img/drop/dano_extra.gif', 'dano_extra'))
+            self.grup_drops.add(ObjetoDrop(self.ambiente, 'static/img/drop/dano_extra.gif', 'dano_extra'))
 
     def criar_caixa_de_texto(self, texto, font_size, pos_x, pos_y):
         """

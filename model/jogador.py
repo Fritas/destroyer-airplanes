@@ -5,7 +5,7 @@ Created on 29 de jun de 2017
 @author: Andrei
 @author: Joao
 """
-from Aeronaves.aeronave_jogador import AeronaveJogador
+from aeronave_jogador import AeronaveJogador
 
 class Jogador(object):
     """
@@ -32,8 +32,8 @@ class Jogador(object):
         :return:
         """
         try:
-            self.aeronave = AeronaveJogador(self.ambiente, img_aeronave, '../img/projetil/projetil.gif',
+            self.aeronave = AeronaveJogador(self.ambiente, img_aeronave, 'static/img/projetil/projetil.gif',
                                        6, 3, 100, 100, 15, (10, 0))
         except self.ambiente.error:
-            self.aeronave = AeronaveJogador(self.ambiente, '../img/aeronave/aviaoJogador.gif', '../img/projetil/projetil.gif',
+            self.aeronave = AeronaveJogador(self.ambiente, 'static/img/aeronave/aviaoJogador.gif', '../img/projetil/projetil.gif',
                                        6, 3, 100, 100, 15, (10, 0))

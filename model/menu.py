@@ -1,3 +1,10 @@
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
 from tkinter import *
 from PIL import Image, ImageTk
 from menu_login import Login
@@ -27,14 +34,14 @@ class Menu:
           * Esse metodo ira criar o menu principal
           * Adiciona uma background super bacana ao menu:
         '''
-        self.background_n = Image.open("../img/menu/background.gif")
+        self.background_n = Image.open("static/img/menu/background.gif")
         self.background_n = self.background_n.resize((int(500), int(500)), Image.ANTIALIAS)
         self.bg_render = ImageTk.PhotoImage(self.background_n)
         self.bg_img = Label(self.canvas, image = self.bg_render, borderwidth = 0)
         self.bg_img.image = self.bg_render
         self.bg_img.place(x = int(0), y = int(0))
         # * Adiciona o logo/titulo do menu:
-        self.titulo_n = Image.open("../img/menu/titulo.gif")
+        self.titulo_n = Image.open("static/img/menu/titulo.gif")
         self.titulo_n = self.titulo_n.resize((int(375), int(50)), Image.ANTIALIAS)
         self.titulo_render = ImageTk.PhotoImage(self.titulo_n)
         self.titulo_img = Label(self.canvas, image = self.titulo_render, borderwidth = 0)
@@ -42,7 +49,7 @@ class Menu:
         self.titulo_img.place(x = 75, y = 50)
         self.titulo_img.lift()
         # * Adiciona um botao para iniciar o jogo:
-        self.iniciar_n = Image.open("../img/menu/botoes/iniciar.gif")
+        self.iniciar_n = Image.open("static/img/menu/botoes/iniciar.gif")
         self.iniciar_n = self.iniciar_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.iniciar_render = ImageTk.PhotoImage(self.iniciar_n)
         self.iniciar_img = Label(self.canvas, image = self.iniciar_render, borderwidth = 0)
@@ -51,7 +58,7 @@ class Menu:
         self.iniciar_img.bind("<Button-1>", lambda s : self.mostrar_iniciar_jogo())
         self.iniciar_img.lift()
         # * Adiciona um botao para ver o ranking do jogo:
-        self.ranking_n = Image.open("../img/menu/botoes/ranking.gif")
+        self.ranking_n = Image.open("static/img/menu/botoes/ranking.gif")
         self.ranking_n = self.ranking_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.ranking_render = ImageTk.PhotoImage(self.ranking_n)
         self.ranking_img = Label(self.canvas, image = self.ranking_render, borderwidth = 0)
@@ -60,7 +67,7 @@ class Menu:
         self.ranking_img.bind("<Button-1>", lambda s : self.mostrar_ranking())
         self.ranking_img.lift()
         # * Adiciona os creditos do jogo:
-        self.creditos_n = Image.open("../img/menu/botoes/creditos.gif")
+        self.creditos_n = Image.open("static/img/menu/botoes/creditos.gif")
         self.creditos_n = self.creditos_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.creditos_render = ImageTk.PhotoImage(self.creditos_n)
         self.creditos_img = Label(self.canvas, image = self.creditos_render, borderwidth = 0)
@@ -69,7 +76,7 @@ class Menu:
         self.creditos_img.bind("<Button-1>", lambda s : self.mostrar_creditos())
         self.creditos_img.lift()
         # * Adiciona a caixa de créditos do jogo (submenu Creditos):
-        self.img_creditos_n = Image.open("../img/menu/creditos.gif")
+        self.img_creditos_n = Image.open("static/img/menu/creditos.gif")
         self.img_creditos_n = self.img_creditos_n.resize((int(175), int(175)), Image.ANTIALIAS)
         self.img_creditos_render = ImageTk.PhotoImage(self.img_creditos_n)
         self.img_creditos_img = Label(self.canvas, image = self.img_creditos_render, borderwidth = 0)
@@ -78,7 +85,7 @@ class Menu:
         self.img_creditos_img.lower()
 
         # * Adiciona um botao de sair:
-        self.sair_n = Image.open("../img/menu/botoes/sair.gif")
+        self.sair_n = Image.open("static/img/menu/botoes/sair.gif")
         self.sair_n = self.sair_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.sair_render = ImageTk.PhotoImage(self.sair_n)
         self.sair_img = Label(self.canvas, image = self.sair_render, borderwidth = 0)
@@ -96,7 +103,7 @@ class Menu:
         self.voltarmain_img.bind("<Button-1>", lambda s : self.evento_voltar_mainmenu())
         self.voltarmain_img.lower()
         # * Adiciona um botao de voltar submenu iniciar:
-        self.voltarini_n = Image.open("../img/menu/botoes/voltar.gif")
+        self.voltarini_n = Image.open("static/img/menu/botoes/voltar.gif")
         self.voltarini_n = self.voltarini_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.voltarini_render = ImageTk.PhotoImage(self.voltarini_n)
         self.voltarini_img = Label(self.canvas, image=self.voltarini_render, borderwidth=0)
@@ -105,7 +112,7 @@ class Menu:
         self.voltarini_img.bind("<Button-1>", lambda s: self.evento_voltar_submenu_iniciar())
         self.voltarini_img.lower()
         # * Adiciona um botao de voltar submenu ranking:
-        self.voltarank_n = Image.open("../img/menu/botoes/voltar.gif")
+        self.voltarank_n = Image.open("static/img/menu/botoes/voltar.gif")
         self.voltarank_n = self.voltarank_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.voltarank_render = ImageTk.PhotoImage(self.voltarank_n)
         self.voltarank_img = Label(self.canvas, image=self.voltarank_render, borderwidth=0)
@@ -114,7 +121,7 @@ class Menu:
         self.voltarank_img.bind("<Button-1>", lambda s: self.evento_voltar_submenu_ranking())
         self.voltarank_img.lower()
         # * Adiciona um botão do top +10 (submenu Ranking):
-        self.top10mais_n = Image.open("../img/menu/botoes/top10mais.gif")
+        self.top10mais_n = Image.open("static/img/menu/botoes/top10mais.gif")
         self.top10mais_n = self.top10mais_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.top10mais_render = ImageTk.PhotoImage(self.top10mais_n)
         self.top10mais_img = Label(self.canvas, image=self.top10mais_render, borderwidth=0)
@@ -132,7 +139,7 @@ class Menu:
         self.top10menos_img.bind("<Button-1>", lambda s : self.mostrar_top10menos())
         self.top10menos_img.lower()
         # * Adiciona um botao de entrar/login (submenu Iniciar Jogo):
-        self.entrar_n = Image.open("../img/menu/botoes/entrar.gif")
+        self.entrar_n = Image.open("static/img/menu/botoes/entrar.gif")
         self.entrar_n = self.entrar_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.entrar_render = ImageTk.PhotoImage(self.entrar_n)
         self.entrar_img = Label(self.canvas, image=self.entrar_render, borderwidth=0)
@@ -141,7 +148,7 @@ class Menu:
         self.entrar_img.bind("<Button-1>", lambda s : self.mostrar_entrar())
         self.entrar_img.lower()
         # * Adiciona um botao de registro (submenu Iniciar Jogo):
-        self.registro_n = Image.open("../img/menu/botoes/registrar.gif")
+        self.registro_n = Image.open("static/img/menu/botoes/registrar.gif")
         self.registro_n = self.registro_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.registro_render = ImageTk.PhotoImage(self.registro_n)
         self.registro_img = Label(self.canvas, image=self.registro_render, borderwidth=0)

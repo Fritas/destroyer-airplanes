@@ -6,8 +6,8 @@ Created on 29 de jun de 2017
 @author: Joao
 """
 
-from Aeronaves.objeto_aeronave import ObjetoAeronave
-from Aeronaves.projetil import Projetil
+from objeto_aeronave import ObjetoAeronave
+from projetil import Projetil
 
 class AeronaveJogador(ObjetoAeronave):
     """
@@ -53,7 +53,7 @@ class AeronaveJogador(ObjetoAeronave):
         Crias as variveis do sons da aeronave
         :return:
         """
-        self.som_tiro = self.ambiente.mixer.Sound('../sound/tiro.wav')
+        self.som_tiro = self.ambiente.mixer.Sound('static/sound/tiro.wav')
         self.som_tiro.set_volume(0.5)
 
     def definir_coord(self):

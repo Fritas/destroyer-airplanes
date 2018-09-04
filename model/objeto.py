@@ -1,5 +1,10 @@
 """
-Objeto do professor Riad com modificado
+
+Objeto do professor Riad modificado
+@author: Riad
+@author: Adriano
+@author: Andrei
+@author: Joao
 """
 from pygame import sprite
 

@@ -1,3 +1,10 @@
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
 import sqlite3
 
 class Crud:

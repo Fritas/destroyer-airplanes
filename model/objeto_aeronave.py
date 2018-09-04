@@ -1,4 +1,11 @@
-from Jogo.objeto import Objeto
+"""
+Created on jun de 2017
+
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
+from objeto import Objeto
 
 class ObjetoAeronave(Objeto):
     """

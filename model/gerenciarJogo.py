@@ -1,11 +1,16 @@
-import sys
-sys.path.append("..")
-import pygame
-from Jogo.motorJogo import Jogo
+"""
+Created on jun de 2017
 
-helicoptero = '../img/aeronave/helicopteroNPC.gif'
-aviaoNPC = '../img/aeronave/aviaoNPC.gif'
-aviao = '../img/aeronave/aviaoJogador.gif'
+@author: Adriano
+@author: Andrei
+@author: Joao
+"""
+import pygame
+from motorJogo import Jogo
+
+helicoptero = 'static/img/aeronave/helicopteroNPC.gif'
+aviaoNPC = 'static/img/aeronave/aviaoNPC.gif'
+aviao = 'static/img/aeronave/aviaoJogador.gif'
 
 
 def iniciar_jogo(jogador):

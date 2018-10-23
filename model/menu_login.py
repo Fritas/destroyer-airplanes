@@ -15,7 +15,9 @@ class Login:
     """
 
     def __init__(self, root, nome_form, bg_cor):
-        # * Método para definir algumas propriedades do tkinter ao contruir objeto
+        """ 
+            * Método para definir algumas propriedades do tkinter ao contruir objeto 
+        """
         self.master = root
         self.bg_cor = bg_cor
         self.fg_cor = '#cecece'
@@ -31,7 +33,9 @@ class Login:
         self.criar_area_login()
 
     def criar_area_login(self):
-        # * Esse método irá criar os elementos necessários para fazer acesso
+        """
+            * Esse método irá criar os elementos necessários para fazer acesso
+        """ 
         self.lblusuario = Label(self.master, text = 'Usuario:', font = self.fonte, bg = self.bg_cor, fg = self.fg_cor)
         self.lblusuario.place(x = 25, y = 10)
 
@@ -53,17 +57,11 @@ class Login:
                              highlightcolor = self.cor, highlightthickness = 4, width = 18, font = 10, command = self.evento_entrar)
         self.entrar.place(x = 25, y = 150)
 
-    #def criar_area_login(self):
-    #    lista = [("Label", "Usuario: "), ("Label", "Senha: "), ("Button", "Login")]
-    #    for tupla in lista:
-    #        if tupla[0]
-
     def evento_entrar(self):
         """
             * Esse metodo serve para verificar o login sem utilizar o banco de dados,
             * eh um metodo de testes apenas, nao considerar 
         """
-
         senha = self.txtsenha.get()
         usuario = self.txtusuario.get()
         cnct = Conexao()
@@ -75,6 +73,7 @@ class Login:
             self.master.destroy()
             #execua funcao que inicia o pygame e os metodos para o inicio do jogo
             iniciar_jogo(jogador)
+            
         else:
-            print("erro no login")
+            print("Erro no login")
             #executar as funções de erro no login

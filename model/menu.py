@@ -48,6 +48,7 @@ class Menu:
         self.titulo_img.image = self.titulo_render
         self.titulo_img.place(x = 75, y = 50)
         self.titulo_img.lift()
+        
         # * Adiciona um botao para iniciar o jogo:
         self.iniciar_n = Image.open("static/img/menu/botoes/iniciar.gif")
         self.iniciar_n = self.iniciar_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -57,6 +58,7 @@ class Menu:
         self.iniciar_img.place(x = 175, y = 150)
         self.iniciar_img.bind("<Button-1>", lambda s : self.mostrar_iniciar_jogo())
         self.iniciar_img.lift()
+
         # * Adiciona um botao para ver o ranking do jogo:
         self.ranking_n = Image.open("static/img/menu/botoes/ranking.gif")
         self.ranking_n = self.ranking_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -66,6 +68,7 @@ class Menu:
         self.ranking_img.place(x = 175, y = 195)
         self.ranking_img.bind("<Button-1>", lambda s : self.mostrar_ranking())
         self.ranking_img.lift()
+
         # * Adiciona os creditos do jogo:
         self.creditos_n = Image.open("static/img/menu/botoes/creditos.gif")
         self.creditos_n = self.creditos_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -75,6 +78,7 @@ class Menu:
         self.creditos_img.place(x = 175, y = 240)
         self.creditos_img.bind("<Button-1>", lambda s : self.mostrar_creditos())
         self.creditos_img.lift()
+
         # * Adiciona a caixa de créditos do jogo (submenu Creditos):
         self.img_creditos_n = Image.open("static/img/menu/creditos.gif")
         self.img_creditos_n = self.img_creditos_n.resize((int(175), int(175)), Image.ANTIALIAS)
@@ -93,6 +97,7 @@ class Menu:
         self.sair_img.place(x = 175, y = 330)
         self.sair_img.bind("<Button-1>", lambda s : self.evento_sair())
         self.sair_img.lift()
+
         # * Adiciona um botao de voltar menu principal:
         self.voltarmain_n = Image.open("static/img/menu/botoes/voltar.gif")
         self.voltarmain_n = self.voltarmain_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -102,6 +107,7 @@ class Menu:
         self.voltarmain_img.place(x = 175, y = 330)
         self.voltarmain_img.bind("<Button-1>", lambda s : self.evento_voltar_mainmenu())
         self.voltarmain_img.lower()
+
         # * Adiciona um botao de voltar submenu iniciar:
         self.voltarini_n = Image.open("static/img/menu/botoes/voltar.gif")
         self.voltarini_n = self.voltarini_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -111,6 +117,7 @@ class Menu:
         self.voltarini_img.place(x=175, y=330)
         self.voltarini_img.bind("<Button-1>", lambda s: self.evento_voltar_submenu_iniciar())
         self.voltarini_img.lower()
+
         # * Adiciona um botao de voltar submenu ranking:
         self.voltarank_n = Image.open("static/img/menu/botoes/voltar.gif")
         self.voltarank_n = self.voltarank_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -120,6 +127,7 @@ class Menu:
         self.voltarank_img.place(x=175, y=330)
         self.voltarank_img.bind("<Button-1>", lambda s: self.evento_voltar_submenu_ranking())
         self.voltarank_img.lower()
+
         # * Adiciona um botão do top +10 (submenu Ranking):
         self.top10mais_n = Image.open("static/img/menu/botoes/top10mais.gif")
         self.top10mais_n = self.top10mais_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -129,6 +137,7 @@ class Menu:
         self.top10mais_img.place(x=175, y=150)
         self.top10mais_img.bind("<Button-1>", lambda s : self.mostrar_top10mais())
         self.top10mais_img.lower()
+
         # * Adiciona um botão do top -10 (submenu Ranking):
         self.top10menos_n = Image.open("static/img/menu/botoes/top10menos.gif")
         self.top10menos_n = self.top10menos_n.resize((int(175), int(40)), Image.ANTIALIAS)
@@ -138,6 +147,7 @@ class Menu:
         self.top10menos_img.place(x=175, y=195)
         self.top10menos_img.bind("<Button-1>", lambda s : self.mostrar_top10menos())
         self.top10menos_img.lower()
+
         # * Adiciona um botao de entrar/login (submenu Iniciar Jogo):
         self.entrar_n = Image.open("static/img/menu/botoes/entrar.gif")
         self.entrar_n = self.entrar_n.resize((int(175), int(40)), Image.ANTIALIAS)

@@ -5,7 +5,7 @@ Created on jun de 2017
 @author: Andrei
 @author: Joao
 """
-from objeto import Objeto
+from .objeto import Objeto
 
 class ObjetoAeronave(Objeto):
     """

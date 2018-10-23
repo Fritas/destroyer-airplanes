@@ -6,7 +6,7 @@ Created on jun de 2017
 @author: Joao
 """
 
-from banco_de_dados.crud import Crud
+from .crud import Crud
 
 class Conexao(Crud):
     """

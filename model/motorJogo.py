@@ -6,10 +6,10 @@ Created on jun de 2017
 @author: Joao
 """
 from random import randint
-from mapa import Mapa
-from objeto_drop import ObjetoDrop
-from jogador import Jogador
-from aeronave_npc import AeronaveNPC
+from .mapa import Mapa
+from .objeto_drop import ObjetoDrop
+from .jogador import Jogador
+from .aeronave_npc import AeronaveNPC
 
 
 class Jogo(object):
@@ -83,7 +83,7 @@ class Jogo(object):
         try:
             self.grup_cenario.add(Mapa(self.ambiente, img_mapa))
         except self.ambiente.error:
-            self.grup_cenario.add(Mapa(self.ambiente, '../img/mapa/mapa3.jpg'))
+            self.grup_cenario.add(Mapa(self.ambiente, 'static/img/mapa/mapa3.jpg'))
 
     def inicializar_som(self):
         """

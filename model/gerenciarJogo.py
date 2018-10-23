@@ -6,7 +6,7 @@ Created on jun de 2017
 @author: Joao
 """
 import pygame
-from motorJogo import Jogo
+from .motorJogo import Jogo
 
 helicoptero = 'static/img/aeronave/helicopteroNPC.gif'
 aviaoNPC = 'static/img/aeronave/aviaoNPC.gif'

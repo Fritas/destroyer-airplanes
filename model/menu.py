@@ -7,8 +7,8 @@ Created on jun de 2017
 """
 from tkinter import *
 from PIL import Image, ImageTk
-from menu_login import Login
-from menu_registrar import Registro
+from .menu_login import Login
+from .menu_registrar import Registro
 
 class Menu:
     '''
@@ -94,7 +94,7 @@ class Menu:
         self.sair_img.bind("<Button-1>", lambda s : self.evento_sair())
         self.sair_img.lift()
         # * Adiciona um botao de voltar menu principal:
-        self.voltarmain_n = Image.open("../img/menu/botoes/voltar.gif")
+        self.voltarmain_n = Image.open("static/img/menu/botoes/voltar.gif")
         self.voltarmain_n = self.voltarmain_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.voltarmain_render = ImageTk.PhotoImage(self.voltarmain_n)
         self.voltarmain_img = Label(self.canvas, image = self.voltarmain_render, borderwidth = 0)
@@ -130,7 +130,7 @@ class Menu:
         self.top10mais_img.bind("<Button-1>", lambda s : self.mostrar_top10mais())
         self.top10mais_img.lower()
         # * Adiciona um botão do top -10 (submenu Ranking):
-        self.top10menos_n = Image.open("../img/menu/botoes/top10menos.gif")
+        self.top10menos_n = Image.open("static/img/menu/botoes/top10menos.gif")
         self.top10menos_n = self.top10menos_n.resize((int(175), int(40)), Image.ANTIALIAS)
         self.top10menos_render = ImageTk.PhotoImage(self.top10menos_n)
         self.top10menos_img = Label(self.canvas, image=self.top10menos_render, borderwidth=0)

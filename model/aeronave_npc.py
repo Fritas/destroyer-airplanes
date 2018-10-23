@@ -7,8 +7,8 @@ Created on 22 de jun de 2017
 """
 
 from random import randint
-from objeto_aeronave import ObjetoAeronave
-from projetil import Projetil
+from .objeto_aeronave import ObjetoAeronave
+from .projetil import Projetil
 
 
 class AeronaveNPC(ObjetoAeronave):

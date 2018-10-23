@@ -7,7 +7,7 @@ Created on jun de 2017
 """
 from tkinter import *
 from dal.conexao import Conexao
-from gerenciarJogo import iniciar_jogo
+from .gerenciarJogo import iniciar_jogo
 
 class Login:
     """

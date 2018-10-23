@@ -5,7 +5,7 @@ Created on 22 de jun de 2017
 @author: Andrei
 @author: Joao
 """
-from jogo.objeto import Objeto
+from .objeto import Objeto
 
 class Mapa(Objeto):
     """

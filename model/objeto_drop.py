@@ -6,7 +6,7 @@ Created on jun de 2017
 @author: Joao
 """
 from random import randint
-from objeto import Objeto
+from .objeto import Objeto
 
 
 

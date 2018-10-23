@@ -6,8 +6,8 @@ Created on 29 de jun de 2017
 @author: Joao
 """
 
-from objeto_aeronave import ObjetoAeronave
-from projetil import Projetil
+from .objeto_aeronave import ObjetoAeronave
+from .projetil import Projetil
 
 class AeronaveJogador(ObjetoAeronave):
     """

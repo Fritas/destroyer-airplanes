@@ -24,7 +24,7 @@ class Crud:
 		:return: se a conexão for um sucesso, True. Se não, False
 		"""
 		try:
-			self.conn = sqlite3.connect('../bancoDeDados/database.db')
+			self.conn = sqlite3.connect('database.db')
 			self.cursor = self.conn.cursor()
 			print("Conexão realizada com sucesso!")
 			return True
@@ -74,20 +74,19 @@ class Crud:
 	def inserir_todos(self, usuario, senha):
 		"""
         função para inserção de todos os dados na tabela jogador
-        :param usuario:
-        :param senha:
+        :param usuario: str
+        :param senha: str
 		:return: Se sucesso, True. Senão, False
 		"""
 		try:
 			self.connect_database()
-			sql = "INSERT INTO jogador (nome_usuario, senha_usuario) VALUES ('%s', '%s')"%(usuario, senha)
+			sql = "INSERT INTO jogador (nome_usuario, senha_usuario) VALUES ('%s', '%s')" %(usuario, senha)
 			self.cursor.execute(sql)
 			self.conn.commit()
 			return True
 
-		except sqlite3.Error:
-			print(sqlite3.Error)
-			print("Erro ao inserir")
+		except sqlite3.Error as error:
+			print("Erro ao inserir: ", error)
 			self.close_connection()
 			return False
 
@@ -106,3 +105,7 @@ class Crud:
 			print("Erro")
 			self.close_connection()
 			return False
+
+if __name__ == "__main__":
+	crud = Crud()
+	crud.inserir_todos('adriano123', '123')

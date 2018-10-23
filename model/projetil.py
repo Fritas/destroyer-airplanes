@@ -7,7 +7,7 @@ Created on 3 de jul de 2017
 """
 
 from random import randint
-from objeto import Objeto
+from .objeto import Objeto
 
 
 class Projetil(Objeto):

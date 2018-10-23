@@ -163,7 +163,7 @@ class Jogo(object):
 
     def criar_caixa_de_texto(self, texto, font_size, pos_x, pos_y):
         """
-        O metodo cria um objeto aeronaveNPC
+        O metodo cria uma caixa de texto na tela
         :param texto: string com o texto
         :param font_size: tamanho da fonte
         :param pos_x: posicao x de onde o texto deve aparecer
@@ -372,7 +372,9 @@ class Jogo(object):
             self.ambiente.time_tiro += self.clock.get_time()
             self.cont += 1
             if not self.status_jogo():
-                print("Você perdeu!")
+                self.criar_caixa_de_texto("Fim de Jogo!", 30, self.largura / 2, self.altura / 2)
+                self.atualizar_tela()
+                self.ambiente.time.delay(600)
                 break
             jogar = self.tratar_eventos()
             self.atualizar_objetos()

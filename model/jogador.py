@@ -9,7 +9,7 @@ from .aeronave_jogador import AeronaveJogador
 
 class Jogador(object):
     """
-    A classe contem um jogador
+        A classe contem um jogador
     """
 
     pontos = 0
